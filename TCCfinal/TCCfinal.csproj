@@ -132,6 +132,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="UserControl1.resx">
       <DependentUpon>UserControl1.cs</DependentUpon>
@@ -149,6 +150,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-usuário-45.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-edit-spread-sheet-table-drop-down-menu-document-pencil-selection-45.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-gráfico-45.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-lista-de-verificação-45.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
