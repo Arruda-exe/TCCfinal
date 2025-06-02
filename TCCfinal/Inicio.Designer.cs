@@ -29,20 +29,22 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnUser = new System.Windows.Forms.Button();
-            this.btnTabela = new System.Windows.Forms.Button();
-            this.btnGrafico = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.btnGrafico = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnTabela = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnUser = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.listView1 = new System.Windows.Forms.ListView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -61,43 +63,6 @@
             this.panel1.Size = new System.Drawing.Size(322, 1024);
             this.panel1.TabIndex = 0;
             // 
-            // btnUser
-            // 
-            this.btnUser.BackColor = System.Drawing.Color.White;
-            this.btnUser.Location = new System.Drawing.Point(3, 44);
-            this.btnUser.Name = "btnUser";
-            this.btnUser.Size = new System.Drawing.Size(302, 87);
-            this.btnUser.TabIndex = 0;
-            this.btnUser.Text = "       User";
-            this.btnUser.UseVisualStyleBackColor = false;
-            // 
-            // btnTabela
-            // 
-            this.btnTabela.Location = new System.Drawing.Point(0, 322);
-            this.btnTabela.Name = "btnTabela";
-            this.btnTabela.Size = new System.Drawing.Size(305, 96);
-            this.btnTabela.TabIndex = 2;
-            this.btnTabela.Text = "         Tabelas";
-            this.btnTabela.UseVisualStyleBackColor = true;
-            // 
-            // btnGrafico
-            // 
-            this.btnGrafico.Location = new System.Drawing.Point(0, 424);
-            this.btnGrafico.Name = "btnGrafico";
-            this.btnGrafico.Size = new System.Drawing.Size(305, 96);
-            this.btnGrafico.TabIndex = 4;
-            this.btnGrafico.Text = "       Graficos";
-            this.btnGrafico.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(-3, 526);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(308, 96);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "         lembretes";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.White;
@@ -108,6 +73,15 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 7;
             this.pictureBox4.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(-3, 526);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(308, 96);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "         lembretes";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // pictureBox3
             // 
@@ -120,6 +94,15 @@
             this.pictureBox3.TabIndex = 5;
             this.pictureBox3.TabStop = false;
             // 
+            // btnGrafico
+            // 
+            this.btnGrafico.Location = new System.Drawing.Point(0, 424);
+            this.btnGrafico.Name = "btnGrafico";
+            this.btnGrafico.Size = new System.Drawing.Size(305, 96);
+            this.btnGrafico.TabIndex = 4;
+            this.btnGrafico.Text = "       Graficos";
+            this.btnGrafico.UseVisualStyleBackColor = true;
+            // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.White;
@@ -130,6 +113,15 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
+            // 
+            // btnTabela
+            // 
+            this.btnTabela.Location = new System.Drawing.Point(0, 322);
+            this.btnTabela.Name = "btnTabela";
+            this.btnTabela.Size = new System.Drawing.Size(305, 96);
+            this.btnTabela.TabIndex = 2;
+            this.btnTabela.Text = "         Tabelas";
+            this.btnTabela.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
@@ -142,12 +134,35 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // btnUser
+            // 
+            this.btnUser.BackColor = System.Drawing.Color.White;
+            this.btnUser.Location = new System.Drawing.Point(3, 44);
+            this.btnUser.Name = "btnUser";
+            this.btnUser.Size = new System.Drawing.Size(302, 87);
+            this.btnUser.TabIndex = 0;
+            this.btnUser.Text = "       User";
+            this.btnUser.UseVisualStyleBackColor = false;
+            // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.listView1);
             this.panel2.Location = new System.Drawing.Point(326, 2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1308, 1024);
             this.panel2.TabIndex = 1;
+            // 
+            // listView1
+            // 
+            this.listView1.FullRowSelect = true;
+            this.listView1.GridLines = true;
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(15, 218);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(1279, 794);
+            this.listView1.TabIndex = 0;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
             // 
             // Inicio
             // 
@@ -164,6 +179,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -180,5 +196,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.ListView listView1;
     }
 }
