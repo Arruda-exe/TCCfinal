@@ -29,15 +29,13 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnGrafico = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnTabela = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnUser = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlFundo = new System.Windows.Forms.Panel();
+            this.lblSaldo = new System.Windows.Forms.Label();
+            this.btnCalcular = new System.Windows.Forms.Button();
             this.btnCadastra = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.btnAtualizar = new System.Windows.Forms.Button();
@@ -51,15 +49,17 @@
             this.radioSaida = new System.Windows.Forms.RadioButton();
             this.radioEntrada = new System.Windows.Forms.RadioButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnCalcular = new System.Windows.Forms.Button();
-            this.lblSaldo = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            this.pnlFundo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -78,17 +78,6 @@
             this.panel1.Size = new System.Drawing.Size(322, 1024);
             this.panel1.TabIndex = 0;
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.White;
-            this.pictureBox4.Image = global::TCCfinal.Properties.Resources.icons8_lista_de_verificação_45;
-            this.pictureBox4.Location = new System.Drawing.Point(9, 553);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(42, 42);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 7;
-            this.pictureBox4.TabStop = false;
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(-3, 526);
@@ -97,17 +86,6 @@
             this.button1.TabIndex = 6;
             this.button1.Text = "         lembretes";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.White;
-            this.pictureBox3.Image = global::TCCfinal.Properties.Resources.icons8_gráfico_45;
-            this.pictureBox3.Location = new System.Drawing.Point(9, 450);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(45, 39);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 5;
-            this.pictureBox3.TabStop = false;
             // 
             // btnGrafico
             // 
@@ -118,17 +96,6 @@
             this.btnGrafico.Text = "       Graficos";
             this.btnGrafico.UseVisualStyleBackColor = true;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.White;
-            this.pictureBox2.Image = global::TCCfinal.Properties.Resources.icons8_edit_spread_sheet_table_drop_down_menu_document_pencil_selection_45;
-            this.pictureBox2.Location = new System.Drawing.Point(15, 348);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(36, 42);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
-            // 
             // btnTabela
             // 
             this.btnTabela.Location = new System.Drawing.Point(0, 322);
@@ -137,17 +104,6 @@
             this.btnTabela.TabIndex = 2;
             this.btnTabela.Text = "         Tabelas";
             this.btnTabela.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.pictureBox1.Image = global::TCCfinal.Properties.Resources.icons8_usuário_45;
-            this.pictureBox1.Location = new System.Drawing.Point(15, 68);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(45, 38);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // btnUser
             // 
@@ -158,28 +114,49 @@
             this.btnUser.TabIndex = 0;
             this.btnUser.Text = "       User";
             this.btnUser.UseVisualStyleBackColor = false;
+            this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
             // 
-            // panel2
+            // pnlFundo
             // 
-            this.panel2.Controls.Add(this.lblSaldo);
-            this.panel2.Controls.Add(this.btnCalcular);
-            this.panel2.Controls.Add(this.btnCadastra);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.btnAtualizar);
-            this.panel2.Controls.Add(this.btnExcluir);
-            this.panel2.Controls.Add(this.txtValor);
-            this.panel2.Controls.Add(this.txtData);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.comboDescricao);
-            this.panel2.Controls.Add(this.radioSaida);
-            this.panel2.Controls.Add(this.radioEntrada);
-            this.panel2.Controls.Add(this.dataGridView1);
-            this.panel2.Location = new System.Drawing.Point(326, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1308, 1024);
-            this.panel2.TabIndex = 1;
+            this.pnlFundo.Controls.Add(this.lblSaldo);
+            this.pnlFundo.Controls.Add(this.btnCalcular);
+            this.pnlFundo.Controls.Add(this.btnCadastra);
+            this.pnlFundo.Controls.Add(this.label4);
+            this.pnlFundo.Controls.Add(this.btnAtualizar);
+            this.pnlFundo.Controls.Add(this.btnExcluir);
+            this.pnlFundo.Controls.Add(this.txtValor);
+            this.pnlFundo.Controls.Add(this.txtData);
+            this.pnlFundo.Controls.Add(this.label3);
+            this.pnlFundo.Controls.Add(this.label2);
+            this.pnlFundo.Controls.Add(this.label1);
+            this.pnlFundo.Controls.Add(this.comboDescricao);
+            this.pnlFundo.Controls.Add(this.radioSaida);
+            this.pnlFundo.Controls.Add(this.radioEntrada);
+            this.pnlFundo.Controls.Add(this.dataGridView1);
+            this.pnlFundo.Location = new System.Drawing.Point(326, 2);
+            this.pnlFundo.Name = "pnlFundo";
+            this.pnlFundo.Size = new System.Drawing.Size(1363, 1012);
+            this.pnlFundo.TabIndex = 1;
+            // 
+            // lblSaldo
+            // 
+            this.lblSaldo.AutoSize = true;
+            this.lblSaldo.Font = new System.Drawing.Font("Britannic Bold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSaldo.Location = new System.Drawing.Point(1091, 553);
+            this.lblSaldo.Name = "lblSaldo";
+            this.lblSaldo.Size = new System.Drawing.Size(141, 25);
+            this.lblSaldo.TabIndex = 16;
+            this.lblSaldo.Text = "SALDO ATUAL";
+            // 
+            // btnCalcular
+            // 
+            this.btnCalcular.Location = new System.Drawing.Point(1189, 467);
+            this.btnCalcular.Name = "btnCalcular";
+            this.btnCalcular.Size = new System.Drawing.Size(95, 53);
+            this.btnCalcular.TabIndex = 15;
+            this.btnCalcular.Text = "calcular";
+            this.btnCalcular.UseVisualStyleBackColor = true;
+            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
             // 
             // btnCadastra
             // 
@@ -305,44 +282,68 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
             // 
-            // btnCalcular
+            // pictureBox4
             // 
-            this.btnCalcular.Location = new System.Drawing.Point(1189, 467);
-            this.btnCalcular.Name = "btnCalcular";
-            this.btnCalcular.Size = new System.Drawing.Size(95, 53);
-            this.btnCalcular.TabIndex = 15;
-            this.btnCalcular.Text = "calcular";
-            this.btnCalcular.UseVisualStyleBackColor = true;
-            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
+            this.pictureBox4.BackColor = System.Drawing.Color.White;
+            this.pictureBox4.Image = global::TCCfinal.Properties.Resources.icons8_lista_de_verificação_45;
+            this.pictureBox4.Location = new System.Drawing.Point(9, 553);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(42, 42);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 7;
+            this.pictureBox4.TabStop = false;
             // 
-            // lblSaldo
+            // pictureBox3
             // 
-            this.lblSaldo.AutoSize = true;
-            this.lblSaldo.Location = new System.Drawing.Point(1139, 553);
-            this.lblSaldo.Name = "lblSaldo";
-            this.lblSaldo.Size = new System.Drawing.Size(65, 20);
-            this.lblSaldo.TabIndex = 16;
-            this.lblSaldo.Text = "lblSaldo";
-            
+            this.pictureBox3.BackColor = System.Drawing.Color.White;
+            this.pictureBox3.Image = global::TCCfinal.Properties.Resources.icons8_gráfico_45;
+            this.pictureBox3.Location = new System.Drawing.Point(9, 450);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(45, 39);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 5;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.White;
+            this.pictureBox2.Image = global::TCCfinal.Properties.Resources.icons8_edit_spread_sheet_table_drop_down_menu_document_pencil_selection_45;
+            this.pictureBox2.Location = new System.Drawing.Point(15, 348);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(36, 42);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.pictureBox1.Image = global::TCCfinal.Properties.Resources.icons8_usuário_45;
+            this.pictureBox1.Location = new System.Drawing.Point(15, 68);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(45, 38);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1646, 1026);
-            this.Controls.Add(this.panel2);
+            this.ClientSize = new System.Drawing.Size(1701, 1026);
+            this.Controls.Add(this.pnlFundo);
             this.Controls.Add(this.panel1);
             this.Name = "Inicio";
             this.Text = "Inicio";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
+            this.pnlFundo.ResumeLayout(false);
+            this.pnlFundo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -358,7 +359,7 @@
         private System.Windows.Forms.Button btnGrafico;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnlFundo;
         private System.Windows.Forms.RadioButton radioSaida;
         private System.Windows.Forms.RadioButton radioEntrada;
         private System.Windows.Forms.DataGridView dataGridView1;

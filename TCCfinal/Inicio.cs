@@ -230,8 +230,22 @@ namespace TCCfinal
             else
                 lblSaldo.ForeColor = Color.Red;
         }
+        public void CarregarTela(UserControl tela)
+        {
+          
+            pnlFundo.Controls.Clear();
+          
+            tela.Dock = DockStyle.Fill;
+            pnlFundo.Controls.Add(tela);
+        }
+        private void btnUser_Click(object sender, EventArgs e)
+        {
+         
 
-        
+            CarregarTela(new User());
+
+            
+        }
     }
 
 }
