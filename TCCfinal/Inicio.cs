@@ -132,6 +132,27 @@ namespace TCCfinal
             }
         }
 
+        private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            // Verifica se está na coluna "valor"
+            if (dataGridView1.Columns[e.ColumnIndex].Name == "valor" && e.Value != null)
+            {
+                // Descobre o tipo (entrada/saída) da linha atual
+                var tipo = dataGridView1.Rows[e.RowIndex].Cells["tipo"].Value?.ToString();
+
+                if (tipo == "receita") // Entrada
+                {
+                    e.CellStyle.ForeColor = Color.Green;
+                    e.CellStyle.SelectionForeColor = Color.Green;
+                }
+                else if (tipo == "despesa") // Saída
+                {
+                    e.CellStyle.ForeColor = Color.Red;
+                    e.CellStyle.SelectionForeColor = Color.Red;
+                }
+            }
+        }
+
         private void btnAtualizar_Click(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count > 0)
@@ -180,6 +201,37 @@ namespace TCCfinal
         {
             CarregarCategorias(); // Carrega as categorias de despesa
         }
+
+        private void btnCalcular_Click(object sender, EventArgs e)
+        {
+            decimal totalEntradas = 0, totalSaidas = 0;
+
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if (row.Cells["tipo"].Value == null || row.Cells["valor"].Value == null)
+                    continue;
+
+                string tipo = row.Cells["tipo"].Value.ToString();
+                decimal valor = 0;
+                decimal.TryParse(row.Cells["valor"].Value.ToString(), out valor);
+
+                if (tipo == "receita")
+                    totalEntradas += valor;
+                else if (tipo == "despesa")
+                    totalSaidas += valor;
+            }
+
+            decimal saldo = totalEntradas - totalSaidas;
+            lblSaldo.Text = $"Saldo atual: R$ {saldo:N2}";
+
+            // Altera a cor do label conforme o saldo
+            if (saldo >= 0)
+                lblSaldo.ForeColor = Color.Green;
+            else
+                lblSaldo.ForeColor = Color.Red;
+        }
+
+        
     }
 
 }

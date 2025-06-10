@@ -42,7 +42,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnAtualizar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
-            this.btnCadastrar = new System.Windows.Forms.Button();
             this.txtValor = new System.Windows.Forms.TextBox();
             this.txtData = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -52,6 +51,8 @@
             this.radioSaida = new System.Windows.Forms.RadioButton();
             this.radioEntrada = new System.Windows.Forms.RadioButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnCalcular = new System.Windows.Forms.Button();
+            this.lblSaldo = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -160,11 +161,12 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.lblSaldo);
+            this.panel2.Controls.Add(this.btnCalcular);
             this.panel2.Controls.Add(this.btnCadastra);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.btnAtualizar);
             this.panel2.Controls.Add(this.btnExcluir);
-            this.panel2.Controls.Add(this.btnCadastrar);
             this.panel2.Controls.Add(this.txtValor);
             this.panel2.Controls.Add(this.txtData);
             this.panel2.Controls.Add(this.label3);
@@ -192,15 +194,16 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Rockwell", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(47, 44);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 20);
+            this.label4.Size = new System.Drawing.Size(444, 50);
             this.label4.TabIndex = 12;
-            this.label4.Text = "label4";
+            this.label4.Text = "MONTE SUA TABELA";
             // 
             // btnAtualizar
             // 
-            this.btnAtualizar.Location = new System.Drawing.Point(1134, 450);
+            this.btnAtualizar.Location = new System.Drawing.Point(1073, 467);
             this.btnAtualizar.Name = "btnAtualizar";
             this.btnAtualizar.Size = new System.Drawing.Size(95, 53);
             this.btnAtualizar.TabIndex = 11;
@@ -217,13 +220,6 @@
             this.btnExcluir.Text = "excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
-            // 
-            // btnCadastrar
-            // 
-            this.btnCadastrar.Location = new System.Drawing.Point(0, 0);
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(75, 23);
-            this.btnCadastrar.TabIndex = 15;
             // 
             // txtValor
             // 
@@ -307,6 +303,27 @@
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(1015, 906);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
+            // 
+            // btnCalcular
+            // 
+            this.btnCalcular.Location = new System.Drawing.Point(1189, 467);
+            this.btnCalcular.Name = "btnCalcular";
+            this.btnCalcular.Size = new System.Drawing.Size(95, 53);
+            this.btnCalcular.TabIndex = 15;
+            this.btnCalcular.Text = "calcular";
+            this.btnCalcular.UseVisualStyleBackColor = true;
+            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
+            // 
+            // lblSaldo
+            // 
+            this.lblSaldo.AutoSize = true;
+            this.lblSaldo.Location = new System.Drawing.Point(1139, 553);
+            this.lblSaldo.Name = "lblSaldo";
+            this.lblSaldo.Size = new System.Drawing.Size(65, 20);
+            this.lblSaldo.TabIndex = 16;
+            this.lblSaldo.Text = "lblSaldo";
+            
             // 
             // Inicio
             // 
@@ -347,7 +364,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnAtualizar;
         private System.Windows.Forms.Button btnExcluir;
-        private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.TextBox txtValor;
         private System.Windows.Forms.TextBox txtData;
         private System.Windows.Forms.Label label3;
@@ -356,5 +372,7 @@
         private System.Windows.Forms.ComboBox comboDescricao;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnCadastra;
+        private System.Windows.Forms.Button btnCalcular;
+        private System.Windows.Forms.Label lblSaldo;
     }
 }
