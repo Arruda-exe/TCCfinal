@@ -246,6 +246,16 @@ namespace TCCfinal
 
             
         }
+
+        private void btnGrafico_Click(object sender, EventArgs e)
+        {
+            CarregarTela(new Graficos());
+        }
+
+        private void btnTabela_Click(object sender, EventArgs e)
+        {
+            //CarregarTela(new Inicio());
+        }
     }
 
 }
