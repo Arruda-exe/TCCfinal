@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -44,7 +44,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(825, 289);
+            this.label1.Location = new System.Drawing.Point(719, 151);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(318, 20);
             this.label1.TabIndex = 0;
@@ -64,31 +64,31 @@
             // 
             // chart1
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chart1.Legends.Add(legend3);
-            this.chart1.Location = new System.Drawing.Point(334, 233);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(26, 132);
             this.chart1.Name = "chart1";
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chart1.Series.Add(series3);
-            this.chart1.Size = new System.Drawing.Size(477, 343);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(673, 535);
             this.chart1.TabIndex = 4;
             this.chart1.Text = "chart1";
             // 
             // comboBoxTipoGrafico
             // 
             this.comboBoxTipoGrafico.FormattingEnabled = true;
-            this.comboBoxTipoGrafico.Location = new System.Drawing.Point(844, 341);
+            this.comboBoxTipoGrafico.Location = new System.Drawing.Point(723, 201);
             this.comboBoxTipoGrafico.Name = "comboBoxTipoGrafico";
-            this.comboBoxTipoGrafico.Size = new System.Drawing.Size(287, 28);
+            this.comboBoxTipoGrafico.Size = new System.Drawing.Size(277, 28);
             this.comboBoxTipoGrafico.TabIndex = 3;
             // 
             // btnVerGrafico
             // 
-            this.btnVerGrafico.Location = new System.Drawing.Point(902, 474);
+            this.btnVerGrafico.Location = new System.Drawing.Point(781, 308);
             this.btnVerGrafico.Name = "btnVerGrafico";
             this.btnVerGrafico.Size = new System.Drawing.Size(162, 72);
             this.btnVerGrafico.TabIndex = 2;
@@ -99,7 +99,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(898, 431);
+            this.label2.Location = new System.Drawing.Point(777, 262);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(150, 20);
             this.label2.TabIndex = 1;

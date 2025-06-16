@@ -14,7 +14,7 @@ namespace TCCfinal
     public partial class Graficos : UserControl
     {
         // Variáveis de instância aqui!
-        private string connectionString = "server=localhost;database=bancodedados;";
+        private string connectionString = "server=localhost;user=root;database=controle_financeiro;port=3306;password=;";
 
         public Graficos()
         {
@@ -26,9 +26,9 @@ namespace TCCfinal
         private void Graficos_Load(object sender, EventArgs e)
         {
             comboBoxTipoGrafico.Items.Clear();
-            comboBoxTipoGrafico.Items.Add("Pizza - Despesas por categoria");
-            comboBoxTipoGrafico.Items.Add("Barra - Receitas x Despesas por mês");
-            comboBoxTipoGrafico.Items.Add("Linha - Saldo ao longo do tempo");
+            comboBoxTipoGrafico.Items.Add("Linha ");
+            comboBoxTipoGrafico.Items.Add("Barra ");
+            comboBoxTipoGrafico.Items.Add("Pizza ");
             comboBoxTipoGrafico.SelectedIndex = 0;
         }
 
