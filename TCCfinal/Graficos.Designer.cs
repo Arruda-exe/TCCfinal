@@ -28,12 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.comboBoxTipoGrafico = new System.Windows.Forms.ComboBox();
+            this.btnVerGrafico = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -47,8 +52,9 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.chart1);
+            this.panel1.Controls.Add(this.comboBoxTipoGrafico);
+            this.panel1.Controls.Add(this.btnVerGrafico);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(293, 3);
@@ -56,22 +62,39 @@
             this.panel1.Size = new System.Drawing.Size(1323, 904);
             this.panel1.TabIndex = 1;
             // 
-            // comboBox1
+            // chart1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(844, 341);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(287, 28);
-            this.comboBox1.TabIndex = 3;
+            chartArea3.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chart1.Legends.Add(legend3);
+            this.chart1.Location = new System.Drawing.Point(334, 233);
+            this.chart1.Name = "chart1";
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.chart1.Series.Add(series3);
+            this.chart1.Size = new System.Drawing.Size(477, 343);
+            this.chart1.TabIndex = 4;
+            this.chart1.Text = "chart1";
             // 
-            // button1
+            // comboBoxTipoGrafico
             // 
-            this.button1.Location = new System.Drawing.Point(902, 474);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(162, 72);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Ver grafico atual";
-            this.button1.UseVisualStyleBackColor = true;
+            this.comboBoxTipoGrafico.FormattingEnabled = true;
+            this.comboBoxTipoGrafico.Location = new System.Drawing.Point(844, 341);
+            this.comboBoxTipoGrafico.Name = "comboBoxTipoGrafico";
+            this.comboBoxTipoGrafico.Size = new System.Drawing.Size(287, 28);
+            this.comboBoxTipoGrafico.TabIndex = 3;
+            // 
+            // btnVerGrafico
+            // 
+            this.btnVerGrafico.Location = new System.Drawing.Point(902, 474);
+            this.btnVerGrafico.Name = "btnVerGrafico";
+            this.btnVerGrafico.Size = new System.Drawing.Size(162, 72);
+            this.btnVerGrafico.TabIndex = 2;
+            this.btnVerGrafico.Text = "Ver grafico atual";
+            this.btnVerGrafico.UseVisualStyleBackColor = true;
+            this.btnVerGrafico.Click += new System.EventHandler(this.btnVerGrafico_Click);
             // 
             // label2
             // 
@@ -91,6 +114,7 @@
             this.Size = new System.Drawing.Size(1619, 907);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -99,8 +123,9 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnVerGrafico;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxTipoGrafico;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
     }
 }
