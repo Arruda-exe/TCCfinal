@@ -18,7 +18,7 @@ namespace TCCfinal
     public partial class Form1 : Form
     {
         private const int raio = 15;
-        private string connectionString = "server=localhost;database=bancodedados;uid=root;pwd=;";
+        string connectionString = "server=localhost;user=root;database=controle_financeiro;port=3306;password=;";
         public Form1()
         {
             InitializeComponent();

@@ -1,21 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+
 using System.Data;
-using System.Data.SqlClient;
+
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+using MySqlConnector;
 
 namespace TCCfinal
 {
     public partial class Graficos : UserControl
     {
         // Variáveis de instância aqui!
-        private string connectionString = "server=localhost;database=controle_financeiro;";
+        private string connectionString = "server=localhost;database=bancodedados;";
 
         public Graficos()
         {
