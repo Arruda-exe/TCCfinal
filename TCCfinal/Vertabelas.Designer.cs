@@ -65,9 +65,9 @@
             this.pnlTabe.Controls.Add(this.radioSaida);
             this.pnlTabe.Controls.Add(this.radioEntrada);
             this.pnlTabe.Controls.Add(this.dataGridView1);
-            this.pnlTabe.Location = new System.Drawing.Point(293, 4);
+            this.pnlTabe.Location = new System.Drawing.Point(3, 4);
             this.pnlTabe.Name = "pnlTabe";
-            this.pnlTabe.Size = new System.Drawing.Size(1345, 1037);
+            this.pnlTabe.Size = new System.Drawing.Size(1745, 1096);
             this.pnlTabe.TabIndex = 0;
             // 
             // lblSaldo
@@ -217,7 +217,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.pnlTabe);
             this.Name = "Vertabelas";
-            this.Size = new System.Drawing.Size(1765, 1008);
+            this.Size = new System.Drawing.Size(1789, 1103);
             this.pnlTabe.ResumeLayout(false);
             this.pnlTabe.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

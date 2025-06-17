@@ -17,6 +17,8 @@ namespace TCCfinal
         public Vertabelas()
         {
             InitializeComponent();
+            CarregarLancamentos();     
+            CarregarCategorias();
         }
 
         private void CarregarLancamentos()
