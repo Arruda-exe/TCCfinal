@@ -241,10 +241,8 @@ namespace TCCfinal
         private void btnUser_Click(object sender, EventArgs e)
         {
          
-
             CarregarTela(new User());
 
-            
         }
 
         private void btnGrafico_Click(object sender, EventArgs e)
@@ -254,7 +252,7 @@ namespace TCCfinal
 
         private void btnTabela_Click(object sender, EventArgs e)
         {
-            CarregarTela(pnlFundo);
+            CarregarTela(new Vertabelas());
         }
     }
 
