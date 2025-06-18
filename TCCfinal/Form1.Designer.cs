@@ -56,6 +56,8 @@
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.btnVerSenha = new System.Windows.Forms.Button();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.pnlCadastro.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.pnlLogin.SuspendLayout();
@@ -65,10 +67,10 @@
             // pnlCadastro
             // 
             this.pnlCadastro.Controls.Add(this.groupBox1);
-            this.pnlCadastro.Location = new System.Drawing.Point(405, 20);
+            this.pnlCadastro.Location = new System.Drawing.Point(801, 91);
             this.pnlCadastro.Margin = new System.Windows.Forms.Padding(2);
             this.pnlCadastro.Name = "pnlCadastro";
-            this.pnlCadastro.Size = new System.Drawing.Size(447, 430);
+            this.pnlCadastro.Size = new System.Drawing.Size(552, 506);
             this.pnlCadastro.TabIndex = 0;
             // 
             // groupBox1
@@ -94,7 +96,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(423, 410);
+            this.groupBox1.Size = new System.Drawing.Size(537, 494);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "cadastro";
@@ -270,14 +272,16 @@
             // pnlLogin
             // 
             this.pnlLogin.Controls.Add(this.groupBox2);
-            this.pnlLogin.Location = new System.Drawing.Point(54, 20);
+            this.pnlLogin.Location = new System.Drawing.Point(155, 91);
             this.pnlLogin.Margin = new System.Windows.Forms.Padding(2);
             this.pnlLogin.Name = "pnlLogin";
-            this.pnlLogin.Size = new System.Drawing.Size(347, 375);
+            this.pnlLogin.Size = new System.Drawing.Size(550, 506);
             this.pnlLogin.TabIndex = 1;
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.linkLabel1);
+            this.groupBox2.Controls.Add(this.btnVerSenha);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.txtSenhaLogin);
             this.groupBox2.Controls.Add(this.txtEmailLogin);
@@ -289,7 +293,7 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(323, 355);
+            this.groupBox2.Size = new System.Drawing.Size(539, 492);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "login";
@@ -298,7 +302,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label10.Location = new System.Drawing.Point(83, 59);
+            this.label10.Location = new System.Drawing.Point(161, 46);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(193, 36);
@@ -307,7 +311,7 @@
             // 
             // txtSenhaLogin
             // 
-            this.txtSenhaLogin.Location = new System.Drawing.Point(59, 253);
+            this.txtSenhaLogin.Location = new System.Drawing.Point(146, 253);
             this.txtSenhaLogin.Margin = new System.Windows.Forms.Padding(2);
             this.txtSenhaLogin.Name = "txtSenhaLogin";
             this.txtSenhaLogin.Size = new System.Drawing.Size(67, 20);
@@ -315,7 +319,7 @@
             // 
             // txtEmailLogin
             // 
-            this.txtEmailLogin.Location = new System.Drawing.Point(59, 172);
+            this.txtEmailLogin.Location = new System.Drawing.Point(146, 173);
             this.txtEmailLogin.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmailLogin.Name = "txtEmailLogin";
             this.txtEmailLogin.Size = new System.Drawing.Size(67, 20);
@@ -325,7 +329,7 @@
             // 
             this.btnContinuar.BackColor = System.Drawing.Color.Silver;
             this.btnContinuar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.btnContinuar.Location = new System.Drawing.Point(179, 244);
+            this.btnContinuar.Location = new System.Drawing.Point(307, 291);
             this.btnContinuar.Margin = new System.Windows.Forms.Padding(2);
             this.btnContinuar.Name = "btnContinuar";
             this.btnContinuar.Size = new System.Drawing.Size(98, 40);
@@ -337,7 +341,7 @@
             // linkLabel2
             // 
             this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(185, 176);
+            this.linkLabel2.Location = new System.Drawing.Point(304, 144);
             this.linkLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(94, 13);
@@ -350,7 +354,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label7.Location = new System.Drawing.Point(62, 231);
+            this.label7.Location = new System.Drawing.Point(143, 226);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(70, 15);
@@ -361,19 +365,40 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.label6.Location = new System.Drawing.Point(61, 148);
+            this.label6.Location = new System.Drawing.Point(144, 142);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(69, 15);
             this.label6.TabIndex = 5;
             this.label6.Text = "Email";
             // 
+            // btnVerSenha
+            // 
+            this.btnVerSenha.Location = new System.Drawing.Point(132, 291);
+            this.btnVerSenha.Name = "btnVerSenha";
+            this.btnVerSenha.Size = new System.Drawing.Size(81, 42);
+            this.btnVerSenha.TabIndex = 15;
+            this.btnVerSenha.Text = "VER SENHA";
+            this.btnVerSenha.UseVisualStyleBackColor = true;
+            this.btnVerSenha.Click += new System.EventHandler(this.btnVerSenha_Click);
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(307, 211);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(84, 13);
+            this.linkLabel1.TabIndex = 16;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "recuperar senha";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(1014, 465);
+            this.ClientSize = new System.Drawing.Size(1438, 730);
             this.Controls.Add(this.pnlCadastro);
             this.Controls.Add(this.pnlLogin);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -422,6 +447,8 @@
         private System.Windows.Forms.DateTimePicker dtpDataNascimento;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button btnVerSenha;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
 

@@ -23,8 +23,9 @@ namespace TCCfinal
         {
             InitializeComponent();
             pnlCadastro.Visible = false;
-            
             this.StartPosition = FormStartPosition.CenterScreen;
+            txtSenhaLogin.UseSystemPasswordChar = true; // Senha já começa oculta (pontilhada)
+            btnVerSenha.Text = "VER SENHA";
 
         }
 
@@ -340,7 +341,63 @@ namespace TCCfinal
             }
         }
 
-       
+        private void btnVerSenha_Click(object sender, EventArgs e)
+        {
+            // Altere para o nome do seu TextBox de senha
+            if (txtSenhaLogin.UseSystemPasswordChar)
+            {
+                txtSenhaLogin.UseSystemPasswordChar = false;
+                btnVerSenha.Text = "OCULTAR";
+            }
+            else
+            {
+
+                txtSenhaLogin.UseSystemPasswordChar = true;
+                btnVerSenha.Text = "VER SENHA";
+            }
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            string email = Microsoft.VisualBasic.Interaction.InputBox(
+                "Digite seu e-mail cadastrado para recuperar a senha:",
+                "Recuperação de Senha", "");
+
+            if (string.IsNullOrEmpty(email))
+                return;
+
+            // Verifica se o email existe no banco
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "SELECT COUNT(*) FROM usuarios WHERE email = @email";
+                MySqlCommand command = new MySqlCommand(query, connection);
+                command.Parameters.AddWithValue("@email", email);
+                int count = Convert.ToInt32(command.ExecuteScalar());
+
+                if (count > 0)
+                {
+                    // Gera nova senha temporária (exemplo simples)
+                    string novaSenha = Guid.NewGuid().ToString().Substring(0, 8);
+
+                    // Atualiza a senha no banco
+                    string updateQuery = "UPDATE usuarios SET senha = @senha WHERE email = @email";
+                    MySqlCommand updateCmd = new MySqlCommand(updateQuery, connection);
+                    updateCmd.Parameters.AddWithValue("@senha", novaSenha);
+                    updateCmd.Parameters.AddWithValue("@email", email);
+                    updateCmd.ExecuteNonQuery();
+
+                    MessageBox.Show(
+                        $"Sua nova senha temporária é: {novaSenha}\nFaça login e altere sua senha.",
+                        "Recuperação de Senha",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("E-mail não encontrado.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+        }
     }
 }
 

@@ -9,11 +9,13 @@ namespace TCCfinal
     public partial class Vertabelas : UserControl
     {
         string connStr = "server=localhost;user=root;database=controle_financeiro;port=3306;password=;";
+
         public Vertabelas()
         {
             InitializeComponent();
             CarregarLancamentos();
             CarregarCategorias();
+            dtpData.Value = DateTime.Now;
         }
 
         private void CarregarLancamentos()
@@ -73,7 +75,7 @@ namespace TCCfinal
 
                     // Define os parâmetros do comando SQL com os valores dos controles do formulário
                     string tipo = radioEntrada.Checked ? "receita" : "despesa";
-                    cmd.Parameters.AddWithValue("@data", DateTime.Parse(txtData.Text));
+                    cmd.Parameters.AddWithValue("@data", DateTime.Parse(dtpData.Text));
                     cmd.Parameters.AddWithValue("@tipo", tipo);
                     cmd.Parameters.AddWithValue("@categoria", comboDescricao.SelectedItem.ToString());
                     cmd.Parameters.AddWithValue("@descricao", comboDescricao.SelectedItem.ToString());
@@ -162,7 +164,7 @@ namespace TCCfinal
                         MySqlCommand cmd = new MySqlCommand(sql, conn);
 
                         string tipo = radioEntrada.Checked ? "receita" : "despesa";
-                        cmd.Parameters.AddWithValue("@data", DateTime.Parse(txtData.Text));
+                        cmd.Parameters.AddWithValue("@data", DateTime.Parse(dtpData.Text));
                         cmd.Parameters.AddWithValue("@tipo", tipo);
                         cmd.Parameters.AddWithValue("@categoria", comboDescricao.SelectedItem.ToString());
                         cmd.Parameters.AddWithValue("@descricao", comboDescricao.SelectedItem.ToString());
