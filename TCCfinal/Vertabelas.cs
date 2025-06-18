@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 
 namespace TCCfinal
 {
@@ -17,7 +12,7 @@ namespace TCCfinal
         public Vertabelas()
         {
             InitializeComponent();
-            CarregarLancamentos();     
+            CarregarLancamentos();
             CarregarCategorias();
         }
 
@@ -132,18 +127,18 @@ namespace TCCfinal
 
         private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            // Verifica se está na coluna "valor"
-            if (dataGridView1.Columns[e.ColumnIndex].Name == "valor" && e.Value != null)
+            // Troque "dataGridView1" pelo nome do seu DataGridView, se for diferente
+            // Ajuste os nomes das colunas se necessário!
+            if (dataGridView1.Columns[e.ColumnIndex].Name == "valor")
             {
-                // Descobre o tipo (entrada/saída) da linha atual
                 var tipo = dataGridView1.Rows[e.RowIndex].Cells["tipo"].Value?.ToString();
 
-                if (tipo == "receita") // Entrada
+                if (tipo == "receita")
                 {
                     e.CellStyle.ForeColor = Color.Green;
                     e.CellStyle.SelectionForeColor = Color.Green;
                 }
-                else if (tipo == "despesa") // Saída
+                else if (tipo == "despesa")
                 {
                     e.CellStyle.ForeColor = Color.Red;
                     e.CellStyle.SelectionForeColor = Color.Red;
@@ -228,6 +223,8 @@ namespace TCCfinal
             else
                 lblSaldo.ForeColor = Color.Red;
         }
+
+
         public void CarregarTela(UserControl tela)
         {
 
@@ -236,24 +233,27 @@ namespace TCCfinal
             tela.Dock = DockStyle.Fill;
             pnlTabe.Controls.Add(tela);
         }
-        private void btnUser_Click(object sender, EventArgs e)
+
+        private void radioEntrada_CheckedChanged_1(object sender, EventArgs e)
         {
+            if (radioEntrada.Checked)
+            {
+                CarregarCategorias();
+                //AtualizarCorTipo();
+            }
+        }
 
-
-            CarregarTela(new User());
-
+        private void radioSaida_CheckedChanged_1(object sender, EventArgs e)
+        {
+            if (radioSaida.Checked)
+            {
+                CarregarCategorias();
+                //AtualizarCorTipo();
+            }
 
         }
 
-        private void btnGrafico_Click(object sender, EventArgs e)
-        {
-            CarregarTela(new Graficos());
-        }
-
-        private void btnTabela_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 
 }

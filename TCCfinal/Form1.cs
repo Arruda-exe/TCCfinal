@@ -209,7 +209,7 @@ namespace TCCfinal
             }
         }
         // Realizar login
-        private void btnContinuar_Click(object sender, EventArgs e)
+        private void btnContinuar_Click_1(object sender, EventArgs e)
         {
             string email = txtEmailLogin.Text.Trim();
             string senha = txtSenhaLogin.Text;
@@ -246,9 +246,10 @@ namespace TCCfinal
 
                             MessageBox.Show($"Bem-vindo, {nomeUsuario}!", "Login Bem-sucedido", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                            // Aqui você pode abrir o formulário principal
-                            // Ex: new FormPrincipal().Show();
-                            // this.Hide();
+                            
+                            Inicio formInicio = new Inicio();
+                            formInicio.Show();
+                            this.Hide();
                         }
                         else
                         {
@@ -339,16 +340,7 @@ namespace TCCfinal
             }
         }
 
-        private void btnContinuar_Click_1(object sender, EventArgs e)
-        {
-            Inicio formInicio = new Inicio();
-
-            // Exibe o novo formulário
-            formInicio.Show();
-
-            // Opcional: fecha o formulário atual (cadastro)
-            this.Hide(); // Ou this.Close() se quiser fechar completamente
-        }
+       
     }
 }
 

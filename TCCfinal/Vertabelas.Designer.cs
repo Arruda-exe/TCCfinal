@@ -65,26 +65,29 @@
             this.pnlTabe.Controls.Add(this.radioSaida);
             this.pnlTabe.Controls.Add(this.radioEntrada);
             this.pnlTabe.Controls.Add(this.dataGridView1);
-            this.pnlTabe.Location = new System.Drawing.Point(3, 4);
+            this.pnlTabe.Location = new System.Drawing.Point(2, 3);
+            this.pnlTabe.Margin = new System.Windows.Forms.Padding(2);
             this.pnlTabe.Name = "pnlTabe";
-            this.pnlTabe.Size = new System.Drawing.Size(1745, 1096);
+            this.pnlTabe.Size = new System.Drawing.Size(1163, 712);
             this.pnlTabe.TabIndex = 0;
             // 
             // lblSaldo
             // 
             this.lblSaldo.AutoSize = true;
-            this.lblSaldo.Font = new System.Drawing.Font("Britannic Bold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSaldo.Location = new System.Drawing.Point(1103, 556);
+            this.lblSaldo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSaldo.Location = new System.Drawing.Point(735, 361);
+            this.lblSaldo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSaldo.Name = "lblSaldo";
-            this.lblSaldo.Size = new System.Drawing.Size(141, 25);
+            this.lblSaldo.Size = new System.Drawing.Size(108, 18);
             this.lblSaldo.TabIndex = 31;
             this.lblSaldo.Text = "SALDO ATUAL";
             // 
             // btnCalcular
             // 
-            this.btnCalcular.Location = new System.Drawing.Point(1201, 470);
+            this.btnCalcular.Location = new System.Drawing.Point(801, 306);
+            this.btnCalcular.Margin = new System.Windows.Forms.Padding(2);
             this.btnCalcular.Name = "btnCalcular";
-            this.btnCalcular.Size = new System.Drawing.Size(95, 53);
+            this.btnCalcular.Size = new System.Drawing.Size(63, 34);
             this.btnCalcular.TabIndex = 30;
             this.btnCalcular.Text = "calcular";
             this.btnCalcular.UseVisualStyleBackColor = true;
@@ -92,9 +95,10 @@
             // 
             // btnCadastra
             // 
-            this.btnCadastra.Location = new System.Drawing.Point(1085, 384);
+            this.btnCadastra.Location = new System.Drawing.Point(723, 250);
+            this.btnCadastra.Margin = new System.Windows.Forms.Padding(2);
             this.btnCadastra.Name = "btnCadastra";
-            this.btnCadastra.Size = new System.Drawing.Size(92, 50);
+            this.btnCadastra.Size = new System.Drawing.Size(61, 32);
             this.btnCadastra.TabIndex = 29;
             this.btnCadastra.Text = "cadastrar";
             this.btnCadastra.UseVisualStyleBackColor = true;
@@ -103,18 +107,20 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Rockwell", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(66, 19);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(44, 12);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(444, 50);
+            this.label4.Size = new System.Drawing.Size(302, 31);
             this.label4.TabIndex = 28;
             this.label4.Text = "MONTE SUA TABELA";
             // 
             // btnAtualizar
             // 
-            this.btnAtualizar.Location = new System.Drawing.Point(1085, 470);
+            this.btnAtualizar.Location = new System.Drawing.Point(723, 306);
+            this.btnAtualizar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAtualizar.Name = "btnAtualizar";
-            this.btnAtualizar.Size = new System.Drawing.Size(95, 53);
+            this.btnAtualizar.Size = new System.Drawing.Size(63, 34);
             this.btnAtualizar.TabIndex = 27;
             this.btnAtualizar.Text = "atualizar";
             this.btnAtualizar.UseVisualStyleBackColor = true;
@@ -122,9 +128,10 @@
             // 
             // btnExcluir
             // 
-            this.btnExcluir.Location = new System.Drawing.Point(1201, 384);
+            this.btnExcluir.Location = new System.Drawing.Point(801, 250);
+            this.btnExcluir.Margin = new System.Windows.Forms.Padding(2);
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(92, 50);
+            this.btnExcluir.Size = new System.Drawing.Size(61, 32);
             this.btnExcluir.TabIndex = 26;
             this.btnExcluir.Text = "excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
@@ -132,92 +139,106 @@
             // 
             // txtValor
             // 
-            this.txtValor.Location = new System.Drawing.Point(1182, 313);
+            this.txtValor.Location = new System.Drawing.Point(788, 203);
+            this.txtValor.Margin = new System.Windows.Forms.Padding(2);
             this.txtValor.Name = "txtValor";
-            this.txtValor.Size = new System.Drawing.Size(121, 26);
+            this.txtValor.Size = new System.Drawing.Size(82, 20);
             this.txtValor.TabIndex = 25;
             // 
             // txtData
             // 
-            this.txtData.Location = new System.Drawing.Point(1182, 256);
+            this.txtData.Location = new System.Drawing.Point(788, 166);
+            this.txtData.Margin = new System.Windows.Forms.Padding(2);
             this.txtData.Name = "txtData";
-            this.txtData.Size = new System.Drawing.Size(121, 26);
+            this.txtData.Size = new System.Drawing.Size(82, 20);
             this.txtData.TabIndex = 24;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(1095, 316);
+            this.label3.Location = new System.Drawing.Point(730, 205);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 20);
+            this.label3.Size = new System.Drawing.Size(30, 13);
             this.label3.TabIndex = 23;
             this.label3.Text = "valor";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(1095, 259);
+            this.label2.Location = new System.Drawing.Point(730, 168);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 20);
+            this.label2.Size = new System.Drawing.Size(28, 13);
             this.label2.TabIndex = 22;
             this.label2.Text = "data";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(1095, 191);
+            this.label1.Location = new System.Drawing.Point(730, 124);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 20);
+            this.label1.Size = new System.Drawing.Size(53, 13);
             this.label1.TabIndex = 21;
             this.label1.Text = "descrição";
             // 
             // comboDescricao
             // 
             this.comboDescricao.FormattingEnabled = true;
-            this.comboDescricao.Location = new System.Drawing.Point(1182, 188);
+            this.comboDescricao.Location = new System.Drawing.Point(788, 122);
+            this.comboDescricao.Margin = new System.Windows.Forms.Padding(2);
             this.comboDescricao.Name = "comboDescricao";
-            this.comboDescricao.Size = new System.Drawing.Size(121, 28);
+            this.comboDescricao.Size = new System.Drawing.Size(82, 21);
             this.comboDescricao.TabIndex = 20;
             // 
             // radioSaida
             // 
             this.radioSaida.AutoSize = true;
-            this.radioSaida.Location = new System.Drawing.Point(1201, 118);
+            this.radioSaida.Location = new System.Drawing.Point(801, 77);
+            this.radioSaida.Margin = new System.Windows.Forms.Padding(2);
             this.radioSaida.Name = "radioSaida";
-            this.radioSaida.Size = new System.Drawing.Size(72, 24);
+            this.radioSaida.Size = new System.Drawing.Size(50, 17);
             this.radioSaida.TabIndex = 19;
             this.radioSaida.TabStop = true;
             this.radioSaida.Text = "saida";
             this.radioSaida.UseVisualStyleBackColor = true;
+            this.radioSaida.CheckedChanged += new System.EventHandler(this.radioSaida_CheckedChanged_1);
             // 
             // radioEntrada
             // 
             this.radioEntrada.AutoSize = true;
-            this.radioEntrada.Location = new System.Drawing.Point(1088, 118);
+            this.radioEntrada.Location = new System.Drawing.Point(725, 77);
+            this.radioEntrada.Margin = new System.Windows.Forms.Padding(2);
             this.radioEntrada.Name = "radioEntrada";
-            this.radioEntrada.Size = new System.Drawing.Size(89, 24);
+            this.radioEntrada.Size = new System.Drawing.Size(61, 17);
             this.radioEntrada.TabIndex = 18;
             this.radioEntrada.TabStop = true;
             this.radioEntrada.Text = "entrada";
             this.radioEntrada.UseVisualStyleBackColor = true;
+            this.radioEntrada.CheckedChanged += new System.EventHandler(this.radioEntrada_CheckedChanged_1);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(28, 87);
+            this.dataGridView1.Location = new System.Drawing.Point(19, 57);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1015, 864);
+            this.dataGridView1.Size = new System.Drawing.Size(677, 562);
             this.dataGridView1.TabIndex = 17;
+          
+            this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
             // 
             // Vertabelas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.pnlTabe);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Vertabelas";
-            this.Size = new System.Drawing.Size(1789, 1103);
+            this.Size = new System.Drawing.Size(1474, 717);
             this.pnlTabe.ResumeLayout(false);
             this.pnlTabe.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
