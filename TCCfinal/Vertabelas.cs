@@ -24,9 +24,9 @@ namespace TCCfinal
             {
                 try
                 {
-                    conn.Open(); // Abre a conexão com o banco
+                    conn.Open(); 
                     string sql = "SELECT id, data, tipo, categoria, descricao, valor FROM lancamentos ORDER BY data DESC";
-                    MySqlDataAdapter da = new MySqlDataAdapter(sql, conn); // Prepara o comando SQL
+                    MySqlDataAdapter da = new MySqlDataAdapter(sql, conn); 
                     DataTable dt = new DataTable();
                     da.Fill(dt); // Preenche o DataTable com os dados do banco
                     dataGridView1.DataSource = dt; // Exibe os dados no DataGridView
@@ -37,7 +37,7 @@ namespace TCCfinal
                 }
             }
         }
-        // Carrega as categorias no ComboBox com base no tipo selecionado (entrada ou saída)
+        
         private void CarregarCategorias()
         {
             using (MySqlConnection conn = new MySqlConnection(connStr))
@@ -45,7 +45,7 @@ namespace TCCfinal
                 try
                 {
                     conn.Open();
-                    // Define o tipo de categoria de acordo com o RadioButton selecionado
+                    
                     string tipo = radioEntrada.Checked ? "receita" : "despesa";
                     string sql = "SELECT nome FROM categorias WHERE tipo = @tipo";
                     MySqlCommand cmd = new MySqlCommand(sql, conn);
@@ -73,7 +73,7 @@ namespace TCCfinal
                     string sql = "INSERT INTO lancamentos (data, tipo, categoria, descricao, valor) VALUES (@data, @tipo, @categoria, @descricao, @valor)";
                     MySqlCommand cmd = new MySqlCommand(sql, conn);
 
-                    // Define os parâmetros do comando SQL com os valores dos controles do formulário
+                    
                     string tipo = radioEntrada.Checked ? "receita" : "despesa";
                     cmd.Parameters.AddWithValue("@data", DateTime.Parse(dtpData.Text));
                     cmd.Parameters.AddWithValue("@tipo", tipo);
@@ -83,7 +83,7 @@ namespace TCCfinal
 
                     cmd.ExecuteNonQuery(); // Executa o comando de inserção
                     MessageBox.Show("Lançamento cadastrado com sucesso!");
-                    CarregarLancamentos(); // Atualiza o DataGridView com o novo lançamento
+                    CarregarLancamentos(); 
                 }
                 catch (Exception ex)
                 {
@@ -219,7 +219,7 @@ namespace TCCfinal
             decimal saldo = totalEntradas - totalSaidas;
             lblSaldo.Text = $"Saldo atual: R$ {saldo:N2}";
 
-            // Altera a cor do label conforme o saldo
+            
             if (saldo >= 0)
                 lblSaldo.ForeColor = Color.Green;
             else
