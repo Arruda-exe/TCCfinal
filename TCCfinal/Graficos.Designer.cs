@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -40,25 +40,23 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(246, 52);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(40, 53);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(475, 25);
+            this.label1.Size = new System.Drawing.Size(249, 50);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Escolha qual modelo de grafico voce deseja";
+            this.label1.Text = "Escolha qual modelo \r\nde grafico voce deseja";
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.chart1);
-            this.panel1.Controls.Add(this.comboBoxTipoGrafico);
-            this.panel1.Controls.Add(this.btnVerGrafico);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Location = new System.Drawing.Point(292, 3);
             this.panel1.Name = "panel1";
@@ -67,16 +65,16 @@
             // 
             // chart1
             // 
-            chartArea4.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chart1.Legends.Add(legend4);
+            chartArea6.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.chart1.Legends.Add(legend6);
             this.chart1.Location = new System.Drawing.Point(26, 132);
             this.chart1.Name = "chart1";
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.chart1.Series.Add(series4);
+            series6.ChartArea = "ChartArea1";
+            series6.Legend = "Legend1";
+            series6.Name = "Series1";
+            this.chart1.Series.Add(series6);
             this.chart1.Size = new System.Drawing.Size(674, 535);
             this.chart1.TabIndex = 4;
             this.chart1.Text = "chart1";
@@ -84,7 +82,7 @@
             // comboBoxTipoGrafico
             // 
             this.comboBoxTipoGrafico.FormattingEnabled = true;
-            this.comboBoxTipoGrafico.Location = new System.Drawing.Point(251, 98);
+            this.comboBoxTipoGrafico.Location = new System.Drawing.Point(23, 124);
             this.comboBoxTipoGrafico.Name = "comboBoxTipoGrafico";
             this.comboBoxTipoGrafico.Size = new System.Drawing.Size(277, 28);
             this.comboBoxTipoGrafico.TabIndex = 3;
@@ -93,7 +91,7 @@
             // 
             this.btnVerGrafico.BackColor = System.Drawing.Color.Transparent;
             this.btnVerGrafico.Font = new System.Drawing.Font("Mongolian Baiti", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVerGrafico.Location = new System.Drawing.Point(762, 340);
+            this.btnVerGrafico.Location = new System.Drawing.Point(67, 265);
             this.btnVerGrafico.Name = "btnVerGrafico";
             this.btnVerGrafico.Size = new System.Drawing.Size(162, 72);
             this.btnVerGrafico.TabIndex = 2;
@@ -104,20 +102,25 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Silver;
-            this.label2.Font = new System.Drawing.Font("Mongolian Baiti", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(748, 299);
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label2.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(40, 215);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(199, 21);
+            this.label2.Size = new System.Drawing.Size(229, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "visualize seu grafico";
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.groupBox1.Controls.Add(this.comboBoxTipoGrafico);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.btnVerGrafico);
+            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(718, 132);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(266, 535);
+            this.groupBox1.Size = new System.Drawing.Size(324, 535);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             // 
@@ -129,8 +132,9 @@
             this.Name = "Graficos";
             this.Size = new System.Drawing.Size(1618, 908);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }

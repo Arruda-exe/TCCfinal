@@ -54,7 +54,7 @@ namespace TCCfinal
             pnlLogin.Left = (this.ClientSize.Width - pnlLogin.Width) / 2;
             pnlLogin.Top = (this.ClientSize.Height - pnlLogin.Height) / 2;
 
-            // Centraliza pnlCadastro
+            
             pnlCadastro.Left = (this.ClientSize.Width - pnlCadastro.Width) / 2;
             pnlCadastro.Top = (this.ClientSize.Height - pnlCadastro.Height) / 2;
         }
@@ -67,7 +67,7 @@ namespace TCCfinal
                 int nLeftRect, int nTopRect, int nRightRect, int nBottomRect,
                 int nWidthEllipse, int nHeightEllipse);
 
-            // Método principal que você vai chamar
+            
             public static void ArredondarControle(Control controle, int raio)
             {
                 try
@@ -75,14 +75,14 @@ namespace TCCfinal
                     // Verifica se o controle é válido e visível
                     if (controle == null || !controle.Visible) return;
 
-                    // Para TextBoxes, remova a borda padrão
+                    
                     if (controle is TextBox)
                     {
-                        //controle.BorderStyle = BorderStyle.None;
+                        
                         controle.Padding = new Padding(10, 3, 10, 3);
                     }
 
-                    // Para Botões, configure estilo flat
+                    
                     if (controle is Button)
                     {
                         var btn = (Button)controle;
@@ -90,7 +90,7 @@ namespace TCCfinal
                         btn.FlatAppearance.BorderSize = 0;
                     }
 
-                    // Cria a região arredondada
+                   
                     controle.Region = Region.FromHrgn(CreateRoundRectRgn(
                         0, 0, controle.Width, controle.Height, raio, raio));
 
@@ -163,7 +163,7 @@ namespace TCCfinal
                 return;
             }
 
-            // Verificar se email já existe
+            
             if (VerificarEmailExistente(email))
             {
                 MessageBox.Show("Este e-mail já está cadastrado.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -184,7 +184,7 @@ namespace TCCfinal
                     MySqlCommand command = new MySqlCommand(query, connection);
                     command.Parameters.AddWithValue("@nome", nome);
                     command.Parameters.AddWithValue("@email", email);
-                    command.Parameters.AddWithValue("@senha", senha); // Senha sem criptografia
+                    command.Parameters.AddWithValue("@senha", senha); 
                     command.Parameters.AddWithValue("@cpf", cpf);
                     command.Parameters.AddWithValue("@dataNascimento", dataNascimento);
                     command.Parameters.AddWithValue("@telefone", telefone);
@@ -209,7 +209,7 @@ namespace TCCfinal
                 MessageBox.Show($"Erro ao cadastrar: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        // Realizar login
+        
         private void btnContinuar_Click_1(object sender, EventArgs e)
         {
             string email = txtEmailLogin.Text.Trim();
@@ -233,7 +233,7 @@ namespace TCCfinal
 
                     MySqlCommand command = new MySqlCommand(query, connection);
                     command.Parameters.AddWithValue("@email", email);
-                    command.Parameters.AddWithValue("@senha", senha); // Comparação direta sem criptografia
+                    command.Parameters.AddWithValue("@senha", senha); 
 
                     using (MySqlDataReader reader = command.ExecuteReader())
                     {
