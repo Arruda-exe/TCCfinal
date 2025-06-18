@@ -44,27 +44,19 @@
             this.radioSaida = new System.Windows.Forms.RadioButton();
             this.radioEntrada = new System.Windows.Forms.RadioButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.pnlTabe.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlTabe
             // 
-            this.pnlTabe.Controls.Add(this.dtpData);
-            this.pnlTabe.Controls.Add(this.lblSaldo);
-            this.pnlTabe.Controls.Add(this.btnCalcular);
-            this.pnlTabe.Controls.Add(this.btnCadastra);
             this.pnlTabe.Controls.Add(this.label4);
-            this.pnlTabe.Controls.Add(this.btnAtualizar);
-            this.pnlTabe.Controls.Add(this.btnExcluir);
-            this.pnlTabe.Controls.Add(this.txtValor);
-            this.pnlTabe.Controls.Add(this.label3);
-            this.pnlTabe.Controls.Add(this.label2);
-            this.pnlTabe.Controls.Add(this.label1);
-            this.pnlTabe.Controls.Add(this.comboDescricao);
-            this.pnlTabe.Controls.Add(this.radioSaida);
-            this.pnlTabe.Controls.Add(this.radioEntrada);
             this.pnlTabe.Controls.Add(this.dataGridView1);
+            this.pnlTabe.Controls.Add(this.groupBox1);
             this.pnlTabe.Location = new System.Drawing.Point(3, 5);
             this.pnlTabe.Name = "pnlTabe";
             this.pnlTabe.Size = new System.Drawing.Size(2143, 1095);
@@ -73,7 +65,7 @@
             // dtpData
             // 
             this.dtpData.Font = new System.Drawing.Font("Mongolian Baiti", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpData.Location = new System.Drawing.Point(1052, 345);
+            this.dtpData.Location = new System.Drawing.Point(67, 286);
             this.dtpData.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dtpData.Name = "dtpData";
             this.dtpData.Size = new System.Drawing.Size(320, 26);
@@ -82,33 +74,35 @@
             // lblSaldo
             // 
             this.lblSaldo.AutoSize = true;
-            this.lblSaldo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSaldo.Location = new System.Drawing.Point(1114, 674);
+            this.lblSaldo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSaldo.ForeColor = System.Drawing.Color.White;
+            this.lblSaldo.Location = new System.Drawing.Point(113, 614);
             this.lblSaldo.Name = "lblSaldo";
-            this.lblSaldo.Size = new System.Drawing.Size(175, 29);
+            this.lblSaldo.Size = new System.Drawing.Size(208, 32);
             this.lblSaldo.TabIndex = 31;
             this.lblSaldo.Text = "SALDO ATUAL";
             // 
             // btnCalcular
             // 
-            this.btnCalcular.Font = new System.Drawing.Font("Mongolian Baiti", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCalcular.Location = new System.Drawing.Point(1214, 589);
+            this.btnCalcular.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCalcular.Location = new System.Drawing.Point(235, 514);
             this.btnCalcular.Name = "btnCalcular";
-            this.btnCalcular.Size = new System.Drawing.Size(94, 52);
+            this.btnCalcular.Size = new System.Drawing.Size(152, 61);
             this.btnCalcular.TabIndex = 30;
-            this.btnCalcular.Text = "calcular";
+            this.btnCalcular.Text = "Calcular";
             this.btnCalcular.UseVisualStyleBackColor = true;
             this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
             // 
             // btnCadastra
             // 
-            this.btnCadastra.Font = new System.Drawing.Font("Mongolian Baiti", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastra.Location = new System.Drawing.Point(1096, 503);
+            this.btnCadastra.BackColor = System.Drawing.Color.Transparent;
+            this.btnCadastra.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastra.Location = new System.Drawing.Point(67, 415);
             this.btnCadastra.Name = "btnCadastra";
-            this.btnCadastra.Size = new System.Drawing.Size(92, 49);
+            this.btnCadastra.Size = new System.Drawing.Size(152, 60);
             this.btnCadastra.TabIndex = 29;
-            this.btnCadastra.Text = "cadastrar";
-            this.btnCadastra.UseVisualStyleBackColor = true;
+            this.btnCadastra.Text = "Cadastrar";
+            this.btnCadastra.UseVisualStyleBackColor = false;
             this.btnCadastra.Click += new System.EventHandler(this.btnCadastra_Click);
             // 
             // label4
@@ -123,95 +117,106 @@
             // 
             // btnAtualizar
             // 
-            this.btnAtualizar.Font = new System.Drawing.Font("Mongolian Baiti", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtualizar.Location = new System.Drawing.Point(1096, 589);
+            this.btnAtualizar.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtualizar.Location = new System.Drawing.Point(67, 514);
             this.btnAtualizar.Name = "btnAtualizar";
-            this.btnAtualizar.Size = new System.Drawing.Size(94, 52);
+            this.btnAtualizar.Size = new System.Drawing.Size(152, 61);
             this.btnAtualizar.TabIndex = 27;
-            this.btnAtualizar.Text = "atualizar";
+            this.btnAtualizar.Text = "Atualizar";
             this.btnAtualizar.UseVisualStyleBackColor = true;
             this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
             // btnExcluir
             // 
-            this.btnExcluir.Font = new System.Drawing.Font("Mongolian Baiti", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcluir.Location = new System.Drawing.Point(1214, 503);
+            this.btnExcluir.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluir.Location = new System.Drawing.Point(235, 415);
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(92, 49);
+            this.btnExcluir.Size = new System.Drawing.Size(152, 60);
             this.btnExcluir.TabIndex = 26;
-            this.btnExcluir.Text = "excluir";
+            this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // txtValor
             // 
-            this.txtValor.Location = new System.Drawing.Point(1162, 406);
+            this.txtValor.Location = new System.Drawing.Point(182, 341);
             this.txtValor.Name = "txtValor";
-            this.txtValor.Size = new System.Drawing.Size(168, 26);
+            this.txtValor.Size = new System.Drawing.Size(205, 35);
             this.txtValor.TabIndex = 25;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Mongolian Baiti", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(1095, 406);
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label3.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(74, 342);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 21);
+            this.label3.Size = new System.Drawing.Size(79, 25);
             this.label3.TabIndex = 23;
-            this.label3.Text = "valor";
+            this.label3.Text = "Valor:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(1096, 301);
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label2.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(83, 235);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 25);
+            this.label2.Size = new System.Drawing.Size(70, 25);
             this.label2.TabIndex = 22;
-            this.label2.Text = "data";
+            this.label2.Text = "Data:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(1093, 243);
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(74, 158);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 21);
+            this.label1.Size = new System.Drawing.Size(112, 25);
             this.label1.TabIndex = 21;
             this.label1.Text = "descrição";
             // 
             // comboDescricao
             // 
+            this.comboDescricao.BackColor = System.Drawing.SystemColors.HighlightText;
             this.comboDescricao.FormattingEnabled = true;
-            this.comboDescricao.Location = new System.Drawing.Point(1195, 241);
+            this.comboDescricao.Location = new System.Drawing.Point(203, 158);
             this.comboDescricao.Name = "comboDescricao";
-            this.comboDescricao.Size = new System.Drawing.Size(121, 28);
+            this.comboDescricao.Size = new System.Drawing.Size(184, 33);
             this.comboDescricao.TabIndex = 20;
             // 
             // radioSaida
             // 
             this.radioSaida.AutoSize = true;
+            this.radioSaida.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.radioSaida.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioSaida.Location = new System.Drawing.Point(1230, 148);
+            this.radioSaida.ForeColor = System.Drawing.Color.White;
+            this.radioSaida.Location = new System.Drawing.Point(235, 60);
             this.radioSaida.Name = "radioSaida";
             this.radioSaida.Size = new System.Drawing.Size(86, 29);
             this.radioSaida.TabIndex = 19;
             this.radioSaida.TabStop = true;
             this.radioSaida.Text = "saida";
-            this.radioSaida.UseVisualStyleBackColor = true;
+            this.radioSaida.UseVisualStyleBackColor = false;
             this.radioSaida.CheckedChanged += new System.EventHandler(this.radioSaida_CheckedChanged_1);
             // 
             // radioEntrada
             // 
             this.radioEntrada.AutoSize = true;
+            this.radioEntrada.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.radioEntrada.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioEntrada.Location = new System.Drawing.Point(1100, 148);
+            this.radioEntrada.ForeColor = System.Drawing.Color.White;
+            this.radioEntrada.Location = new System.Drawing.Point(88, 60);
             this.radioEntrada.Name = "radioEntrada";
             this.radioEntrada.Size = new System.Drawing.Size(109, 29);
             this.radioEntrada.TabIndex = 18;
             this.radioEntrada.TabStop = true;
             this.radioEntrada.Text = "entrada";
-            this.radioEntrada.UseVisualStyleBackColor = true;
+            this.radioEntrada.UseVisualStyleBackColor = false;
             this.radioEntrada.CheckedChanged += new System.EventHandler(this.radioEntrada_CheckedChanged_1);
             // 
             // dataGridView1
@@ -225,6 +230,29 @@
             this.dataGridView1.TabIndex = 17;
             this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.groupBox1.Controls.Add(this.lblSaldo);
+            this.groupBox1.Controls.Add(this.dtpData);
+            this.groupBox1.Controls.Add(this.btnCadastra);
+            this.groupBox1.Controls.Add(this.btnExcluir);
+            this.groupBox1.Controls.Add(this.btnCalcular);
+            this.groupBox1.Controls.Add(this.btnAtualizar);
+            this.groupBox1.Controls.Add(this.txtValor);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.comboDescricao);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.radioEntrada);
+            this.groupBox1.Controls.Add(this.radioSaida);
+            this.groupBox1.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(1050, 88);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(456, 865);
+            this.groupBox1.TabIndex = 33;
+            this.groupBox1.TabStop = false;
+            // 
             // Vertabelas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -235,6 +263,8 @@
             this.pnlTabe.ResumeLayout(false);
             this.pnlTabe.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -257,5 +287,8 @@
         private System.Windows.Forms.RadioButton radioEntrada;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DateTimePicker dtpData;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker2;
     }
 }
