@@ -353,7 +353,7 @@ namespace TCCfinal
             {
 
                 txtSenhaLogin.UseSystemPasswordChar = true;
-                btnVerSenha.Text = "VER SENHA";
+                btnVerSenha.Text = "EXIBIR SENHA";
             }
         }
 
